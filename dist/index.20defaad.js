@@ -575,42 +575,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"8UF9A":[function(require,module,exports) {
-//BakcAccoutn class
-//Deposit money
-//Withdraw money
-//Balance - hidden/encapsulated
-class BankAccount {
-    constructor(initialBalance){
-        this._balanece = initialBalance;
-    }
-    deposit(amount) {
-        if (amount && amount > 0) {
-            this._balanece += amount;
-            return;
-        }
-        console.log("Invalid amount");
-    }
-    withdraw(amount) {
-        if (amount < 0) {
-            console.log("Invalid amount");
-            return;
-        }
-        if (amount > this._balanece) {
-            console.log("Insufficient balance");
-            return;
-        }
-        this._balanece -= amount;
-    }
-    //Getter to get balance of the bank account
-    get balance() {
-        return this._balanece;
-    }
-}
-//Client code
-let account = new BankAccount(1000);
-account.deposit(100);
-account.withdraw(200);
-console.log("Balance", account.balance);
 
 },{}]},["7LkV8","8UF9A"], "8UF9A", "parcelRequire4d93")
 
