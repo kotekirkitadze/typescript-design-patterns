@@ -575,6 +575,49 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"8UF9A":[function(require,module,exports) {
+class Shape {
+    constructor(properties){
+        this.properties = properties;
+    }
+}
+class Rectangle extends Shape {
+    constructor(properties, width, height){
+        super(properties);
+        this.width = width;
+        this.height = height;
+    }
+    clone() {
+        let clonedProperties = {
+            color: this.properties.color,
+            x: this.properties.x,
+            y: this.properties.y
+        };
+        return new Rectangle(clonedProperties, this.width, this.height);
+    }
+}
+class Circle extends Shape {
+    constructor(properties, radius){
+        super(properties);
+        this.radius = radius;
+    }
+    clone() {
+        let clonedProperties = {
+            color: this.properties.color,
+            x: this.properties.x,
+            y: this.properties.y
+        };
+        return new Circle(clonedProperties, this.radius);
+    }
+}
+let redRectangle = new Rectangle({
+    color: "red",
+    x: 20,
+    y: 100
+}, 10, 20);
+let anotherRectangle = redRectangle.clone();
+anotherRectangle.properties.color = "blue";
+console.log(redRectangle);
+console.log(anotherRectangle);
 
 },{}]},["7LkV8","8UF9A"], "8UF9A", "parcelRequire4d93")
 

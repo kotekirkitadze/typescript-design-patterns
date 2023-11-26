@@ -1,3 +1,7 @@
+//The Singleton pattern ensures that
+//a class has only one instance and provides
+//a global point of access to that instance.
+
 //#region implementation of singletone patter
 class Singletone {
 	private static instance: Singletone;
