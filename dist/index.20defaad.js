@@ -575,6 +575,35 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"8UF9A":[function(require,module,exports) {
+//#region Abstract factory pattern
+class ProductA {
+    operationA() {
+        return "Product A";
+    }
+}
+class ProductB {
+    operationB() {
+        return "Product B";
+    }
+    combinedOperation(collaborator) {
+        return `This is the resul of collaborator - ${collaborator.operationA()}`;
+    }
+}
+class Factory {
+    createProductA() {
+        return new ProductA();
+    }
+    createProductB() {
+        return new ProductB();
+    }
+}
+//Client code
+const factory = new Factory();
+const productA = factory.createProductA();
+console.log(productA.operationA());
+const productB = factory.createProductB();
+console.log(productB.combinedOperation(productA));
+console.log(productB.operationB());
 
 },{}]},["7LkV8","8UF9A"], "8UF9A", "parcelRequire4d93")
 
