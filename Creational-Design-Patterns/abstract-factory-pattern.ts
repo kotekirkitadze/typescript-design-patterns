@@ -39,7 +39,7 @@ class Factory implements IFactory {
 		return new ProductB();
 	}
 }
-
+//#endregion
 //Client code
 
 const factory = new Factory();
@@ -49,3 +49,5 @@ console.log(productA.operationA());
 const productB = factory.createProductB();
 console.log(productB.combinedOperation(productA));
 console.log(productB.operationB());
+
+ 

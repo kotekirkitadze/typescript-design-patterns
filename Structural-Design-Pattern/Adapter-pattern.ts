@@ -10,7 +10,7 @@
 // that has the American-style socket and the European-style plug.
 
 
-//#When can be used
+//#region When can be used
 // - when we have Incompatible interfaces 
 // - when we want to use/refactor an legacy code,
 // - Alternative to multiple 
@@ -60,7 +60,7 @@ class SquareToRectangleAdapter  {
 
 
 
-//#Real World implementation
+//#region Real World implementation
 class MySQLDatabase {
     public connectToMySQL(url:string):void{
         console.log(`Connecting to MySQL database at ${url}`);
@@ -109,7 +109,7 @@ database.executeMySQLQuery("SELECT * FROM users");
 //#endregion
 
 
-//# Advantages
+//#region Advantages
 // - Reusability and Flexibility
 //   The adapter pattern promotes code reusability by allowing existing classes
 //   to work together without modification. 
@@ -123,7 +123,7 @@ database.executeMySQLQuery("SELECT * FROM users");
 
 //#endregion
 
-//# Disadvantages
+//#region Disadvantages
 // - Hides adaptee complexity
 //   The adapter pattern can sometimes hide the complexity of the adaptee class,
 //   making it harder to understand its behavior.

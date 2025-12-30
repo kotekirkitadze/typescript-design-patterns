@@ -1,6 +1,6 @@
 //Builder Pattern
 
-//#region
+//#region Builder Pattern
 
 interface Builder {
 	setPartA(): void;
